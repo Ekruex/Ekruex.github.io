@@ -314,3 +314,25 @@ footer {
 footer p {
     color: #99d6ea;
 }
+
+/* Responsieve aanpassingen */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .team-member img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 80px;
+    }
+
+    .team-member img {
+        width: 100px;
+    }
+}
