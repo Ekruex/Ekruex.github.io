@@ -23,27 +23,14 @@ header {
     background-color: var(--card-bg);
 }
 
-/* Profile Container - stays in normal flow */
-.profile-container {
-    text-align: center;
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid var(--border-color);
-    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
-}
-
-/* Profile Image - Moves over the golden line */
-/* Profile Container - Now only for text, no border or background */
+/* Profile Container - Default for larger screens */
 .profile-container {
     text-align: left;
     padding: 20px;
-    box-shadow: none;
-    background: none;
-    border: none;
+    position: relative; /* Ensures relative positioning */
 }
 
-/* Profile Image - Stays positioned over the golden line */
+/* Profile Image - Default for Desktop */
 .profile-container img {
     width: 150px;
     height: 150px;
@@ -52,13 +39,31 @@ header {
     
     /* Positioning */
     position: absolute;
-    top: 150px; /* Moves it upward */
-    left: 10%;
+    top: 140px; /* Adjusted to align with the gold line */
+    left: 9%;
     transform: translateX(-50%);
     
     /* Keep it above other elements */
     background-color: var(--card-bg);
     z-index: 10;
+}
+
+/* Responsive Adjustments for Tablets & Mobile */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-container img {
+        position: static; /* Removes absolute positioning */
+        transform: none;
+        margin-top: -60px; /* Moves it slightly up to align with gold line */
+        width: 120px;
+        height: 120px;
+    }
 }
 
 /* Increase font size for paragraph inside .profile-container */
