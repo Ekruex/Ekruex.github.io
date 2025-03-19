@@ -1,0 +1,129 @@
+/* Color Palette */
+:root {
+    --main-bg: #121212;
+    --text-color: #f0b400;
+    --card-bg: #1e1e1e;
+    --border-color: #f0b400;
+}
+
+/* Reset & General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Header */
+header {
+    padding: 20px;
+    background-color: var(--card-bg);
+}
+
+/* Profile Container - stays in normal flow */
+.profile-container {
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
+}
+
+/* Profile Image - Moves over the golden line */
+/* Profile Container - Now only for text, no border or background */
+.profile-container {
+    text-align: left;
+    padding: 20px;
+    box-shadow: none;
+    background: none;
+    border: none;
+}
+
+/* Profile Image - Stays positioned over the golden line */
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    
+    /* Positioning */
+    position: absolute;
+    top: 150px; /* Moves it upward */
+    left: 10%;
+    transform: translateX(-50%);
+    
+    /* Keep it above other elements */
+    background-color: var(--card-bg);
+    z-index: 10;
+}
+
+/* Increase font size for paragraph inside .profile-container */
+.profile-container p {
+    font-size: 1.4rem; /* Adjust as needed */
+    line-height: 0.7;
+    text-transform: uppercase; /* Optional: Makes "creator" stand out */
+}
+
+h1, h2 {
+    color: var(--text-color);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--card-bg);
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+main {
+    padding: 20px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--card-bg);
+}
+
+/* Gold Line */
+.gold-line {
+    border: none;
+    height: 3px;
+    background-color: var(--border-color);
+    width: 100%;
+    margin: 0px auto;
+}
