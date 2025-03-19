@@ -9,6 +9,8 @@ body {
     background-color: white;
     color: #000;
     text-align: center;
+    line-height: 1.6; /* Increase line height for better readability */
+    letter-spacing: 0.5px; /* Add slight letter spacing */
 }
 
 /* Header */
@@ -17,48 +19,23 @@ header {
     color: #000;
     padding: 20px 0;
     border-top: 5px solid #be7fae;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .logo {
     max-width: 100px;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-/* Importeren van het 'Archivo' lettertype */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
-
-/* Algemene stijlen */
-body {
-    font-family: "Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: #000;
-    text-align: center;
-}
-
-/* Header */
-header {
-    background-color: white;
-    color: #000;
-    padding: 20px 0;
-    border-top: 5px solid #be7fae;
-    text-align: center;
-}
-
-.logo {
-    max-width: 100px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-/* Team container */
 .team-container {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
@@ -70,32 +47,6 @@ header {
     width: 120px;
     height: auto;
     border-radius: 10px;
-}
-
-/* Hoofdinhoud met grid-indeling */
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    gap: 20px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Standaard sectiestijl met oranje achtergrond */
-#faq {
-    background: #e56a54;
-    color: #000;
-    padding: 40px;
-    margin: 40px auto 0;
-    border-radius: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    min-height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 /* Hoofdinhoud met grid-indeling */
@@ -188,17 +139,6 @@ section {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-}
-
-/* Klein tekstkadertje in #e56a54 */
-.gesprek-box {
-    background: #e56a54;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 400px;
-    text-align: left;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Eerste sectie zonder achtergrondkleur */
@@ -434,3 +374,51 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vertrouwenspersoon-section.no-background {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vertrouwenspersoon-section.no-background .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .vertrouwenspersoon-section.no-background .image-container img {
+        width: 100%;
+    }
+
+    .text-content {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .quote-container, .quote-container-two {
+        padding: 10px;
+    }
+
+    .quote-text {
+        font-size: 18px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-section .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .intro-section .image-container img {
+        width: 100%;
+    }
+}
