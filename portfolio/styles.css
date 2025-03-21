@@ -132,3 +132,14 @@ footer {
     width: 100%;
     margin: 0px auto;
 }
+
+a {
+    color: #f0b400;
+    font-size: larger;
+    text-decoration: none; 
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline; 
+}
